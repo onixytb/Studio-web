@@ -17,8 +17,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button, input, textarea, select {
@@ -31,7 +31,7 @@ button, input, textarea, select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(9, 9, 20, 0.94);
+  background: rgba(9, 9, 20, .95);
   border-bottom: 1px solid #202035;
   position: sticky;
   top: 0;
@@ -45,8 +45,7 @@ button, input, textarea, select {
   letter-spacing: -1px;
 }
 
-.logo span,
-.preview-logo span {
+.logo span, .preview-logo span {
   color: #a56bff;
 }
 
@@ -89,7 +88,6 @@ button, input, textarea, select {
   grid-template-columns: 1.1fr .9fr;
   align-items: center;
   gap: 50px;
-  position: relative;
 }
 
 .hero-content {
@@ -395,54 +393,69 @@ button, input, textarea, select {
   transition: .3s;
 }
 
+.project-open {
+  display: block;
+}
+
 .project-image {
   min-height: 250px;
   display: grid;
   place-items: center;
 }
 
-.game {
-  background: radial-gradient(circle at 50% 40%, #42278b, #10101d 70%);
+.project-image.pseudo {
+  background: radial-gradient(circle at center, #263b75, #10101d 75%);
 }
 
 .business {
   background: radial-gradient(circle at 50% 40%, #315a76, #101a25 70%);
 }
 
-.mock-game,
+.mock-pseudo,
 .mock-business {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 13px;
-}
-
-.mock-game > span,
-.mock-business > span {
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-.mock-game strong,
-.mock-business strong {
-  font-size: 32px;
+  gap: 15px;
   text-align: center;
+}
+
+.mock-pseudo span,
+.mock-business > span {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.mock-pseudo span {
+  color: #8daaff;
+}
+
+.mock-pseudo strong,
+.mock-business strong {
+  font-size: 34px;
   line-height: 1.1;
 }
 
-.mock-game strong {
-  color: #b794ff;
+.mock-pseudo strong {
+  color: #a5baff;
 }
 
 .mock-business strong {
   color: #d4e8f5;
 }
 
-.mock-game small,
+.mock-pseudo small,
 .mock-business small {
   font-size: 9px;
   letter-spacing: 2px;
   color: #aaaabe;
+}
+
+.project-visit {
+  margin-top: 12px;
+  color: #b5a0ff;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
 .project-info {
@@ -472,7 +485,6 @@ button, input, textarea, select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  align-items: stretch;
 }
 
 .price-card {
