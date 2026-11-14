@@ -14,229 +14,238 @@
 </head>
 <body>
 
-  <header class="header">
-    <a href="#" class="logo">STUDIO<span>.</span>WEB</a>
+<header class="header">
+  <a href="#accueil" class="logo">STUDIO<span>.</span>WEB</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-      ☰
-    </button>
+  <nav id="navigation">
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#projets">Projets</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact" class="nav-button">Me contacter</a>
+  </nav>
+</header>
 
-    <nav id="navigation">
-      <a href="#accueil">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#projets">Projets</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#contact" class="nav-button">Me contacter</a>
-    </nav>
-  </header>
+<main>
 
-  <main>
-    <section class="hero" id="accueil">
-      <div class="hero-content">
-        <div class="status">
-          <span></span> STUDIO DIGITAL INDÉPENDANT
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="status"><span></span> STUDIO DIGITAL INDÉPENDANT</div>
+
+    <h1>Donnez vie à<br>vos <span>projets web.</span></h1>
+
+    <p>
+      Des sites modernes, rapides et adaptés aux mobiles.
+      Un design soigné pour donner une vraie identité à votre activité.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projets" class="button primary">Voir mes projets ↗</a>
+      <a href="#services" class="button secondary">Découvrir les services</a>
+    </div>
+
+    <div class="hero-stats">
+      <div><strong>100%</strong><small>Adapté mobile</small></div>
+      <div><strong>24/7</strong><small>Sites accessibles</small></div>
+      <div><strong>Sur mesure</strong><small>Design personnalisé</small></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="glow"></div>
+    <div class="preview">
+      <div class="preview-top">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <span>studio-preview.web</span>
+      </div>
+      <div class="preview-body">
+        <div class="preview-logo">STUDIO<span>.</span>WEB</div>
+        <div class="preview-line"></div>
+        <div class="preview-title">YOUR NEXT<br><span>BIG IDEA.</span></div>
+        <div class="preview-line short"></div>
+        <div class="preview-card"><div></div><div></div><div></div></div>
+        <div class="preview-action">EXPLORE MORE ↗</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-heading">
+    <span class="eyebrow">CE QUE JE PROPOSE</span>
+    <h2>Mes <span>services.</span></h2>
+    <p>Des solutions numériques pour développer votre présence en ligne.</p>
+  </div>
+
+  <div class="service-grid">
+    <article class="service-card">
+      <div class="service-icon">⌘</div>
+      <h3>Sites web</h3>
+      <p>Des sites vitrines modernes, rapides et adaptés à tous les écrans.</p>
+      <span>01 / WEB DESIGN</span>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">✳</div>
+      <h3>Design graphique</h3>
+      <p>Des visuels, des affiches et des miniatures personnalisées.</p>
+      <span>02 / GRAPHIC DESIGN</span>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">▶</div>
+      <h3>Montage vidéo</h3>
+      <p>Des vidéos courtes et dynamiques pour les réseaux sociaux.</p>
+      <span>03 / VIDEO EDITING</span>
+    </article>
+  </div>
+</section>
+
+<section class="section projects" id="projets">
+  <div class="section-heading">
+    <span class="eyebrow">MES RÉALISATIONS</span>
+    <h2>Projets <span>sélectionnés.</span></h2>
+    <p>Découvrez mes projets et concepts numériques.</p>
+  </div>
+
+  <div class="project-grid">
+
+    <a href="https://pseudo-finder.onrender.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="project-card project-open">
+
+      <div class="project-image pseudo">
+        <div class="mock-pseudo">
+          <span>PSEUDO.FINDER V13</span>
+          <strong>RESEARCH<br>EVERYTHING.</strong>
+          <small>USERNAME SEARCH PLATFORM</small>
+          <div class="project-visit">VISITER LE PROJET ↗</div>
         </div>
+      </div>
 
-        <h1>
-          Donnez vie à<br>
-          vos <span>projets web.</span>
-        </h1>
-
-        <p>
-          Des sites modernes, rapides et adaptés aux mobiles.
-          Un design soigné pour donner une vraie identité à votre activité.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#projets" class="button primary">Voir mes projets ↗</a>
-          <a href="#services" class="button secondary">Découvrir les services</a>
+      <div class="project-info">
+        <div>
+          <h3>Pseudo Finder</h3>
+          <p>Outil de recherche multi-plateformes</p>
         </div>
+        <span>OSINT</span>
+      </div>
+    </a>
 
-        <div class="hero-stats">
-          <div>
-            <strong>100%</strong>
-            <small>Adapté mobile</small>
-          </div>
-          <div>
-            <strong>24/7</strong>
-            <small>Sites accessibles</small>
-          </div>
-          <div>
-            <strong>Sur mesure</strong>
-            <small>Design personnalisé</small>
-          </div>
+    <article class="project-card">
+      <div class="project-image business">
+        <div class="mock-business">
+          <span>ATELIER</span>
+          <strong>DESIGN<br>YOUR SPACE.</strong>
+          <small>INTERIOR CONCEPT</small>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="glow"></div>
-        <div class="preview">
-          <div class="preview-top">
-            <div class="dots"><i></i><i></i><i></i></div>
-            <span>studio-preview.web</span>
-          </div>
-          <div class="preview-body">
-            <div class="preview-logo">STUDIO<span>.</span>WEB</div>
-            <div class="preview-line"></div>
-            <div class="preview-title">YOUR NEXT<br><span>BIG IDEA.</span></div>
-            <div class="preview-line short"></div>
-            <div class="preview-card">
-              <div></div><div></div><div></div>
-            </div>
-            <div class="preview-action">EXPLORE MORE ↗</div>
-          </div>
+      <div class="project-info">
+        <div>
+          <h3>Atelier</h3>
+          <p>Concept de site vitrine</p>
         </div>
+        <span>DESIGN</span>
       </div>
-    </section>
+    </article>
 
-    <section class="section" id="services">
-      <div class="section-heading">
-        <span class="eyebrow">CE QUE JE PROPOSE</span>
-        <h2>Mes <span>services.</span></h2>
-        <p>Des solutions numériques pour développer votre présence en ligne.</p>
-      </div>
+  </div>
+</section>
 
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-icon">⌘</div>
-          <h3>Sites web</h3>
-          <p>Des sites vitrines modernes, rapides et adaptés à tous les écrans.</p>
-          <span>01 / WEB DESIGN</span>
-        </article>
+<section class="section pricing" id="tarifs">
+  <div class="section-heading">
+    <span class="eyebrow">TARIFS INDICATIFS</span>
+    <h2>Des prix <span>simples.</span></h2>
+    <p>Chaque projet est adapté aux besoins et au travail demandé.</p>
+  </div>
 
-        <article class="service-card">
-          <div class="service-icon">✳</div>
-          <h3>Design graphique</h3>
-          <p>Des visuels, des affiches et des miniatures personnalisées.</p>
-          <span>02 / GRAPHIC DESIGN</span>
-        </article>
+  <div class="pricing-grid">
+    <article class="price-card">
+      <span class="plan-name">STARTER</span>
+      <h3>Miniature</h3>
+      <div class="price">5 € <small>/ création</small></div>
+      <ul>
+        <li>✓ Design personnalisé</li>
+        <li>✓ Format adapté</li>
+        <li>✓ Une proposition</li>
+      </ul>
+      <a href="#contact" class="button secondary full">Demander un devis</a>
+    </article>
 
-        <article class="service-card">
-          <div class="service-icon">▶</div>
-          <h3>Montage vidéo</h3>
-          <p>Des vidéos courtes et dynamiques pour les réseaux sociaux.</p>
-          <span>03 / VIDEO EDITING</span>
-        </article>
-      </div>
-    </section>
+    <article class="price-card featured">
+      <span class="plan-name">POPULAR</span>
+      <h3>Site vitrine</h3>
+      <div class="price">25 € <small>/ à partir de</small></div>
+      <ul>
+        <li>✓ Design moderne</li>
+        <li>✓ Adaptation mobile</li>
+        <li>✓ Présentation de l'activité</li>
+        <li>✓ Mise en ligne à définir</li>
+      </ul>
+      <a href="#contact" class="button primary full">Demander un devis</a>
+    </article>
 
-    <section class="section projects" id="projets">
-      <div class="section-heading">
-        <span class="eyebrow">MES RÉALISATIONS</span>
-        <h2>Projets <span>sélectionnés.</span></h2>
-        <p>Quelques concepts de démonstration réalisés pour présenter mon travail.</p>
-      </div>
+    <article class="price-card">
+      <span class="plan-name">CREATIVE</span>
+      <h3>Montage vidéo</h3>
+      <div class="price">10 € <small>/ à partir de</small></div>
+      <ul>
+        <li>✓ Montage court</li>
+        <li>✓ Transitions</li>
+        <li>✓ Format réseaux sociaux</li>
+      </ul>
+      <a href="#contact" class="button secondary full">Demander un devis</a>
+    </article>
+  </div>
 
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-image game">
-            <div class="mock-game">
-              <span>GAME.DEALS</span>
-              <strong>FIND YOUR<br>NEXT GAME.</strong>
-              <small>GAMING PLATFORM</small>
-            </div>
-          </div>
-          <div class="project-info">
-            <div><h3>Game Deals</h3><p>Concept de plateforme gaming</p></div>
-            <span>WEB</span>
-          </div>
-        </article>
+  <p class="pricing-note">
+    Tarifs indicatifs de lancement. Le prix final dépend du projet.
+    Hébergement et nom de domaine non inclus.
+  </p>
+</section>
 
-        <article class="project-card">
-          <div class="project-image business">
-            <div class="mock-business">
-              <span>ATELIER</span>
-              <strong>DESIGN<br>YOUR SPACE.</strong>
-              <small>INTERIOR CONCEPT</small>
-            </div>
-          </div>
-          <div class="project-info">
-            <div><h3>Atelier</h3><p>Concept de site vitrine</p></div>
-            <span>DESIGN</span>
-          </div>
-        </article>
-      </div>
-    </section>
+<section class="contact-section" id="contact">
+  <div class="contact-box">
+    <span class="eyebrow">UN PROJET EN TÊTE ?</span>
+    <h2>Parlons de votre <span>projet.</span></h2>
+    <p>Décrivez votre idée et nous pourrons discuter de sa réalisation.</p>
 
-    <section class="section pricing" id="tarifs">
-      <div class="section-heading">
-        <span class="eyebrow">TARIFS INDICATIFS</span>
-        <h2>Des prix <span>simples.</span></h2>
-        <p>Chaque projet est adapté aux besoins et au travail demandé.</p>
-      </div>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre adresse e-mail" required>
 
-      <div class="pricing-grid">
-        <article class="price-card">
-          <span class="plan-name">STARTER</span>
-          <h3>Miniature</h3>
-          <div class="price">5 € <small>/ création</small></div>
-          <ul>
-            <li>✓ Design personnalisé</li>
-            <li>✓ Format adapté</li>
-            <li>✓ Une proposition</li>
-          </ul>
-          <a href="#contact" class="button secondary full">Demander un devis</a>
-        </article>
+      <select id="service" required>
+        <option value="">Quel service vous intéresse ?</option>
+        <option>Création de site web</option>
+        <option>Design graphique</option>
+        <option>Montage vidéo</option>
+        <option>Autre demande</option>
+      </select>
 
-        <article class="price-card featured">
-          <span class="plan-name">POPULAR</span>
-          <h3>Site vitrine</h3>
-          <div class="price">25 € <small>/ à partir de</small></div>
-          <ul>
-            <li>✓ Design moderne</li>
-            <li>✓ Adaptation mobile</li>
-            <li>✓ Présentation de l'activité</li>
-            <li>✓ Mise en ligne à définir</li>
-          </ul>
-          <a href="#contact" class="button primary full">Demander un devis</a>
-        </article>
+      <textarea id="message" placeholder="Parlez-moi de votre projet..." rows="5" required></textarea>
 
-        <article class="price-card">
-          <span class="plan-name">CREATIVE</span>
-          <h3>Montage vidéo</h3>
-          <div class="price">10 € <small>/ à partir de</small></div>
-          <ul>
-            <li>✓ Montage court</li>
-            <li>✓ Transitions</li>
-            <li>✓ Format réseaux sociaux</li>
-          </ul>
-          <a href="#contact" class="button secondary full">Demander un devis</a>
-        </article>
-      </div>
-      <p class="pricing-note">Tarifs de lancement indicatifs, à confirmer selon le projet. Hébergement, nom de domaine et options supplémentaires non inclus.</p>
-    </section>
+      <button type="submit" class="button primary full">
+        Envoyer ma demande ↗
+      </button>
+    </form>
 
-    <section class="contact-section" id="contact">
-      <div class="contact-box">
-        <span class="eyebrow">UN PROJET EN TÊTE ?</span>
-        <h2>Parlons de votre <span>projet.</span></h2>
-        <p>Décrivez votre idée et nous pourrons discuter de sa réalisation.</p>
+    <p class="form-note">
+      Votre application e-mail s'ouvrira pour confirmer l'envoi de votre demande.
+    </p>
+  </div>
+</section>
 
-        <form id="contactForm">
-          <input type="text" id="name" placeholder="Votre nom" required>
-          <input type="email" id="email" placeholder="Votre adresse e-mail" required>
-          <select id="service" required>
-            <option value="">Quel service vous intéresse ?</option>
-            <option>Création de site web</option>
-            <option>Design graphique</option>
-            <option>Montage vidéo</option>
-            <option>Autre demande</option>
-          </select>
-          <textarea id="message" placeholder="Parlez-moi de votre projet..." rows="5" required></textarea>
-          <button type="submit" class="button primary full">Envoyer ma demande ↗</button>
-        </form>
+</main>
 
-        <p class="form-note">Le formulaire prépare un e-mail dans votre application de messagerie.</p>
-      </div>
-    </section>
-  </main>
+<footer>
+  <a href="#accueil" class="logo">STUDIO<span>.</span>WEB</a>
+  <p>© 2026 STUDIO.WEB — Tous droits réservés.</p>
+  <a href="#accueil">Retour en haut ↑</a>
+</footer>
 
-  <footer>
-    <a href="#" class="logo">STUDIO<span>.</span>WEB</a>
-    <p>© 2026 STUDIO.WEB — Tous droits réservés.</p>
-    <a href="#accueil">Retour en haut ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
