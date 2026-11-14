@@ -32,9 +32,9 @@ contactForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const destination = "tonadresse@email.com";
+  const destination = "manoloboltz68@gmail.com";
 
-  if (destination === "tonadresse@email.com") {
+  if (destination === "manoloboltz68@gmail.com") {
     alert("Le formulaire est prêt ! Remplace l'adresse e-mail dans script.js par ta propre adresse avant de recevoir des demandes.");
     return;
   }
