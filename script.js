@@ -19,28 +19,22 @@ navigation.querySelectorAll("a").forEach(link => {
   });
 });
 
-// FORMULAIRE DE CONTACT
+// FORMULAIRE DE CONTACT FORMSPREE
 
 const contactForm = document.getElementById("contactForm");
+const confirmation = document.getElementById("formConfirmation");
 
 contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const submitButton = contactForm.querySelector('button[type="submit"]');
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const service = document.getElementById("service").value;
-  const message = document.getElementById("message").value.trim();
 
-  if (!name || !email || !service || !message) {
-    alert("Merci de remplir tous les champs.");
-    return;
-  }
-
-  const originalText = submitButton.textContent;
+  if (!contactForm.reportValidity()) return;
 
   submitButton.disabled = true;
   submitButton.textContent = "ENVOI EN COURS...";
+  confirmation.textContent = "";
+  confirmation.style.color = "";
 
   try {
     const response = await fetch("https://formspree.io/f/xppdpdvn", {
@@ -51,36 +45,36 @@ contactForm.addEventListener("submit", async (event) => {
       }
     });
 
-    if (response.ok) {
-      contactForm.reset();
+    const result = await response.json();
 
-      submitButton.textContent = "MESSAGE ENVOYÉ ✓";
-
-      let confirmation = document.getElementById("formConfirmation");
-
-      if (!confirmation) {
-        confirmation = document.createElement("p");
-        confirmation.id = "formConfirmation";
-        confirmation.style.color = "#39ff88";
-        confirmation.style.marginTop = "15px";
-        confirmation.style.textAlign = "center";
-        contactForm.appendChild(confirmation);
-      }
-
-      confirmation.textContent =
-        "Merci ! Votre demande a bien été envoyée. Je vous répondrai prochainement.";
-
-    } else {
-      throw new Error("Erreur lors de l'envoi.");
+    if (!response.ok) {
+      throw new Error(result.errors?.map(error => error.message).join(", ") || "Erreur d'envoi.");
     }
 
-  } catch (error) {
-    submitButton.textContent = "RÉESSAYER";
-    alert("Impossible d'envoyer votre message. Vérifiez votre connexion et réessayez.");
-  }
+    contactForm.reset();
 
-  setTimeout(() => {
+    confirmation.textContent =
+      "✓ Votre demande a bien été envoyée ! Merci pour votre confiance.";
+
+    confirmation.style.color = "#39ff88";
+    submitButton.textContent = "MESSAGE ENVOYÉ ✓";
+
+  } catch (error) {
+    confirmation.textContent =
+      "Impossible d'envoyer votre demande. Vérifiez votre connexion et réessayez.";
+
+    confirmation.style.color = "#ff6b6b";
+    submitButton.textContent = "RÉESSAYER";
+
+  } finally {
     submitButton.disabled = false;
-    submitButton.textContent = originalText;
-  }, 3000);
+
+    if (submitButton.textContent === "MESSAGE ENVOYÉ ✓") {
+      setTimeout(() => {
+        submitButton.textContent = "Envoyer ma demande ↗";
+      }, 4000);
+    } else if (submitButton.textContent === "RÉESSAYER") {
+      // Le bouton reste disponible pour un nouvel essai.
+    }
+  }
 });
