@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090914">
+  <title>ATELIER — STUDIO.WEB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="atelier-page">
+
+<header class="header">
+  <a href="index.html" class="logo">STUDIO<span>.</span>WEB</a>
+  <a href="index.html#projets" class="button secondary">← Retour aux projets</a>
+</header>
+
+<main>
+  <section class="atelier-hero">
+    <span class="eyebrow">STUDIO.WEB / CRÉATIONS</span>
+    <h1>Mon <span>Atelier.</span></h1>
+    <p>Découvrez mes créations graphiques et mes miniatures.</p>
+  </section>
+
+  <section class="atelier-gallery">
+
+    <article class="atelier-card">
+      <img src="images/miniature-pc.png"
+           alt="Les meilleurs paramètres sur PC"
+           class="atelier-image">
+      <div class="atelier-info">
+        <span>01 / MINIATURE</span>
+        <h2>Les meilleurs paramètres sur PC</h2>
+      </div>
+    </article>
+
+    <article class="atelier-card">
+      <img src="images/valorant.jpg"
+           alt="Miniature Valorant"
+           class="atelier-image">
+      <div class="atelier-info">
+        <span>02 / MINIATURE</span>
+        <h2>Valorant</h2>
+      </div>
+    </article>
+
+    <article class="atelier-card">
+      <img src="images/argent-2026.png"
+           alt="Comment générer plus d'argent en 2026"
+           class="atelier-image">
+      <div class="atelier-info">
+        <span>03 / MINIATURE</span>
+        <h2>Générer plus d'argent en 2026</h2>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<div class="atelier-lightbox" id="lightbox">
+  <button id="closeLightbox" aria-label="Fermer">×</button>
+  <img id="lightboxImage" src="" alt="Aperçu de la création">
+</div>
+
+<footer>
+  <a href="index.html" class="logo">STUDIO<span>.</span>WEB</a>
+  <p>© 2026 STUDIO.WEB</p>
+  <a href="index.html#projets">Retour aux projets ↑</a>
+</footer>
+
+<script>
+const images = document.querySelectorAll(".atelier-image");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const closeButton = document.getElementById("closeLightbox");
+
+images.forEach(image => {
+  image.addEventListener("click", () => {
+    lightboxImage.src = image.src;
+    lightbox.classList.add("active");
+  });
+});
+
+closeButton.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) {
+    lightbox.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>
