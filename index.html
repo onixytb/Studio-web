@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header class="header">
@@ -135,23 +136,23 @@
     </a>
 
     <a href="atelier.html" class="project-card project-open">
-  <div class="project-image business">
-    <div class="mock-business">
-      <span>ATELIER</span>
-      <strong>MY CREATIVE<br>WORK.</strong>
-      <small>GRAPHIC DESIGN</small>
-      <div class="project-visit">DÉCOUVRIR MES CRÉATIONS ↗</div>
-    </div>
-  </div>
+      <div class="project-image business">
+        <div class="mock-business">
+          <span>ATELIER</span>
+          <strong>MY CREATIVE<br>WORK.</strong>
+          <small>GRAPHIC DESIGN</small>
+          <div class="project-visit">DÉCOUVRIR MES CRÉATIONS ↗</div>
+        </div>
+      </div>
 
-  <div class="project-info">
-    <div>
-      <h3>Atelier</h3>
-      <p>Galerie de miniatures et créations graphiques</p>
-    </div>
-    <span>DESIGN</span>
-  </div>
-</a>
+      <div class="project-info">
+        <div>
+          <h3>Atelier</h3>
+          <p>Galerie de miniatures et créations graphiques</p>
+        </div>
+        <span>DESIGN</span>
+      </div>
+    </a>
 
   </div>
 </section>
@@ -164,6 +165,7 @@
   </div>
 
   <div class="pricing-grid">
+
     <article class="price-card">
       <span class="plan-name">STARTER</span>
       <h3>Miniature</h3>
@@ -200,6 +202,7 @@
       </ul>
       <a href="#contact" class="button secondary full">Demander un devis</a>
     </article>
+
   </div>
 
   <p class="pricing-note">
@@ -215,10 +218,28 @@
     <p>Décrivez votre idée et nous pourrons discuter de sa réalisation.</p>
 
     <form id="contactForm">
-      <input type="text" id="name" placeholder="Votre nom" required>
-      <input type="email" id="email" placeholder="Votre adresse e-mail" required>
 
-      <select id="service" required>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Votre nom"
+        autocomplete="name"
+        maxlength="80"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Votre adresse e-mail"
+        autocomplete="email"
+        maxlength="150"
+        required
+      >
+
+      <select name="service" id="service" required>
         <option value="">Quel service vous intéresse ?</option>
         <option>Création de site web</option>
         <option>Design graphique</option>
@@ -226,15 +247,25 @@
         <option>Autre demande</option>
       </select>
 
-      <textarea id="message" placeholder="Parlez-moi de votre projet..." rows="5" required></textarea>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Parlez-moi de votre projet..."
+        rows="5"
+        maxlength="3000"
+        required
+      ></textarea>
 
       <button type="submit" class="button primary full">
         Envoyer ma demande ↗
       </button>
+
+      <p id="formConfirmation" class="form-note" role="status" aria-live="polite"></p>
+
     </form>
 
     <p class="form-note">
-      Votre application e-mail s'ouvrira pour confirmer l'envoi de votre demande.
+      Votre demande sera envoyée directement. Vous recevrez une confirmation après l'envoi.
     </p>
   </div>
 </section>
