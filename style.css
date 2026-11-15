@@ -728,3 +728,119 @@ footer > a:last-child {
     padding: 30px 15px;
   }
 }
+
+/* ATELIER */
+
+.atelier-page {
+  min-height: 100vh;
+}
+
+.atelier-hero {
+  text-align: center;
+  padding: 100px 6% 60px;
+}
+
+.atelier-hero h1 {
+  font-size: clamp(45px, 7vw, 75px);
+  font-weight: 900;
+  letter-spacing: -4px;
+  margin: 18px 0;
+}
+
+.atelier-hero h1 span {
+  background: linear-gradient(100deg, #9b6aff, #518dff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.atelier-hero p {
+  color: #9999ae;
+  font-size: 14px;
+}
+
+.atelier-gallery {
+  padding: 20px 7% 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.atelier-card {
+  background: #111120;
+  border: 1px solid #28283c;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.atelier-card:hover {
+  transform: translateY(-5px);
+  border-color: #8955e9;
+}
+
+.atelier-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.atelier-info {
+  padding: 22px;
+}
+
+.atelier-info span {
+  color: #a77aff;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.atelier-info h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.atelier-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, .94);
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.atelier-lightbox.active {
+  display: flex;
+}
+
+.atelier-lightbox img {
+  max-width: 95%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.atelier-lightbox button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .atelier-hero {
+    padding: 75px 6% 40px;
+  }
+
+  .atelier-gallery {
+    grid-template-columns: 1fr;
+    padding: 15px 6% 70px;
+  }
+}
